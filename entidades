@@ -1,0 +1,35 @@
+entity Datoscliente {
+	/**
+	* The firstname attribute.
+	*/
+	firstName String required,
+	lastName String required,
+    fechaNac String required,
+	cedula String required,
+    ciudad String required,    
+    email String,
+	phoneNumber String required,
+	salario Long,
+	otros Garantia required,
+}
+
+
+
+enum Garantia {
+  PROPIEDAD, VEHICULO
+}
+
+entity Nuevoscreditos{
+	creditoNum Long,
+    fechaCredito Date,
+    capitalCredito Long,
+    cuotasCredito Long,
+    tiempoVencimiento Date,
+    tasaCredito Int,
+	formulaCredito Formula required,
+}
+
+enum Formula {
+	METODOALEMAN, METODOFRANCES, METODOAMERICANO,
+
+}
